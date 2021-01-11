@@ -9,7 +9,6 @@
 // num = toString(num);
 // console.log(typeof(num));
 
-
 // var num = "tarun";
 // num = parseInt(num);
 // console.log(typeof(num));
@@ -34,13 +33,13 @@
 // console.log(number.toPrecision(2));
 
 
+
 //  console.log(typeof(Number("12")));
 // console.log(typeof(Number(10)));
 
 // boolean data type false er jonne 0 true jonne 1 number e dakhate gale
 
 // console.log(Number(false));
-
 // console.log(Number(true));
 
 
@@ -48,27 +47,49 @@
 
 //document.write("Anisul" + " Islam" + " Rubel");
 
+// document.write("Anisul Islam " + "Islam " + "Rubel" + "<br>" + "<br>"); 
+// document.write("Tarun mitra " + "Rubel " + "Rofiq");
+
 // var firstName = "Tarun";
 // var lastName = " Mitra";
 // var fullName = firstName + lastName;
 // document.write(fullName);
+
+/*
+var firstName = "Tarun";
+var lastName = " Mitra";
+var fullName = firstName + lastName;
+document.write(fullName + "<br>");
+
+var firstName = "Tarun";
+var lastName =" mitra";
+var fullName = firstName + lastName;
+document.write(fullName);
+*/
+
+
 
 // var firstName = "Tarun";
 // var lastName = " Mitra";
 // var fullName = firstName + lastName;
 // document.write("My name is" + fullName);
 
+
 //var fullName = "Tarun Mitra";
 //document.write(fullName+ " is my name");
+
 
 // var fullName = "Tarun";
 // document.write("My name is "+ fullName + " Mitra");
 
+//  var num1 = 30;
+//  var num2 = 40;
+
+//  document.write("Numone = " + num1 + " and Numtwo = " + num2);
+
 // var num1 = 30;
 // var num2 = 40;
-
-// document.write("Numone = " + num1 + " and Numtwo =/ " + num2);
-
+// document.write("Name one " + num1 + "<br>" + "Number two " + num2);
 
 
 //Library funtion for string
@@ -76,6 +97,7 @@
 // var text = "Bangladesh";
 // var len = text.length;
 // document.write("Number of character " + len);
+
 
 // var text = "Bangladesh";
 // document.write(text.length);
@@ -1543,3 +1565,599 @@ numbers.sort(function(a,b){
 });
 console.log(numbers);
 */
+
+
+
+// class-28 // Object
+// How to create an object
+// How to print the value of an object
+// adding a constructor
+// adding function inside a constructor
+
+//student details
+
+/*
+var name = "Anisul Islam";
+var age = 27;
+var cgpa = 3.92;
+var lang = ["Bangla", "hindi", "English"];
+
+console.log(age);
+*/
+
+
+// avabe amra na kore object er mardhome sob data akti valiable e nite parbo
+
+
+/*
+var student1 = {
+   name: "Anisul Islam",
+   age: 27,
+   cgpa: 3.92,
+   lang: ["Bangla", "Hindi", "English"]
+}
+
+console.log(student1);
+*/
+
+
+/*
+var student1 = {
+   name: "Anisul Islam",
+   age: 27,
+   cgpa: 3.92,
+   lang: ["Bangla", "Hindi", "English"]
+}
+
+console.log(student1.name);
+*/
+
+
+// abar amra 3-jon students er details store kore rakhbo
+// adding a constructor
+
+/*
+function Student(name, age, cgpa, lang) {   //paramitar
+   this.name = name;
+   this.age = age;
+   this.cgpa = cgpa;
+   this.lang = lang;
+}
+
+var student1 = new Student("Anisul Islam", 27, 3.92, ["benglali", "hindi", "English"]);
+var student2 = new Student("Tarun mitra", 20, 3.92, ["benglali", "hindi", "English"]);
+var student3 = new Student("Sumon biswas", 23, 3.92, ["benglali", "hindi", "English"]);
+var student4 = new Student("Suzan biswas", 29, 3.92, ["benglali", "hindi", "English"]);
+
+console.log(student1,student2,student3,student4);
+*/
+
+/*
+function Student(name, age, cgpa, lang) {
+   this.name = name;
+   this.age = age;
+   this.cgpa = cgpa;
+   this.lang = lang;
+}
+
+var student1 = new Student("Anisul Islam", 27, 3.92, ["benglali", "hindi", "English"]);
+var student2 = new Student("Tarun mitra", 20, 3.92, ["benglali", "hindi", "English"]);
+var student3 = new Student("Sumon biswas", 23, 3.92, ["benglali", "hindi", "English"]);
+var student4 = new Student("Suzan biswas", 29, 3.92, ["benglali", "hindi", "English"]);
+
+console.log(student1.name);
+console.log(student1.age);
+console.log(student1.cgpa);
+console.log(student1.lang);
+*/
+
+
+//  adding function inside a constructor
+/*
+function Student(name, age, cgpa, lang) {
+   this.name = name;
+   this.age = age;
+   this.cgpa = cgpa;
+   this.lang = lang;
+
+   this.display = function () {    // this.anyname daya jai 
+      console.log(this.name);
+      console.log(this.age);
+      console.log(this.cgpa);
+      console.log(this.lang);
+    }
+}
+
+var student1 = new Student("Anisul Islam", 27, 3.00, ["bangla", "English"]);
+var student2 = new Student("Tarun mitra", 27, 3.00, ["bangla", "English"]);
+var student3 = new Student("Rofiq Islam", 27, 3.00, ["bangla", "English"]);
+var student4 = new Student("Luna Islam", 27, 3.00, ["bangla", "English"]);
+
+student1.display();
+student2.display();
+student3.display();
+student4.display();
+
+*/
+
+
+// class-29  // Math Object
+
+/*
+// maximum number
+
+var num1 = parseInt(prompt("Enter first number : "));
+var num2 = parseInt(prompt("Enter second number: "));
+
+var maximum = Math.max (num1,num2);
+console.log(maximum);
+*/
+
+
+/*
+// random  0 thake 1 er vitor sonkha randomly nibe kinto 1 ke inqlud kore nah
+
+console.log(Math.random());
+
+// base value ta rakha baki value fale dai
+// akhane 5 rakha .444 fale dice
+
+console.log(Math.floor(5.444));
+
+// math.round ata dosomik er por value 5 er boro thakle mul sonkha er satha 1 juk hbe
+
+console.log(Math.round(5.666));
+
+//Math.ceil hoce dosomik sonkha ja value thakbe tar thake 1 boro hbe
+
+ console.log(Math.ceil(5.444));
+
+ // absolate number dakhabe
+
+ console.log(Math.abs(4.6));
+ console.log(Math.abs(-4));
+
+ //Generate a random number (0-10)
+ // highest je vlue lagbe tar thake ak bashi * korete hbe
+ // akhane 10 lagbe tai 1 bashi dice
+
+ console.log(Math.floor(Math.random() * 11));
+
+ console.log(Math.ceil(Math.random() * 11))
+
+ */
+
+
+ // class-30 // Guessing Game
+
+ // Guessing a number from 1 to 5
+ // Generate a random number between 1 to 5
+ // If the guess number matches random number; then show message won else lost
+ // Run the game for 5 times
+ // show the number of wons and losts
+ // total complete code holo step-3 bujanor jonne avabe korlam
+
+ /*
+ // step-1
+
+ var guessNumber = parseInt(prompt("Enter a number from 1 to 5 : "));
+
+ var randomNumber = Math.floor(Math.random() * 5) + 1;   // 1 thake 5 projontu random number nibe
+
+ if (guessNumber == randomNumber) {
+   console.log("You have won");
+ }else {
+    console.log("You have lost. Random number was " + randomNumber);
+ }
+*/
+
+/*
+ // step-2
+ // akhon poro kaj ta 5 bar cholbe tai total code ta loop er vitor niya nilam
+
+ for (var i = 1; i <= 5; i++) {
+
+   var guessNumber = parseInt(prompt("Enter a number from 1 to 5 : "));
+
+   var randomNumber = Math.floor(Math.random() * 5) + 1;   // 1 thake 5 projontu random number nibe
+  
+   if (guessNumber == randomNumber) {
+     console.log("You have won");
+   }else {
+      console.log("You have lost. Random number was " + randomNumber);
+   }
+}
+*/
+
+
+
+/*
+// step-3
+// akhon koto bar won and lost tai show korbe
+
+var numOfWon = 0;
+var numOfLost = 0;
+
+for (var i = 1; i <= 5; i++) {
+
+   var guessNumber = parseInt(prompt("Enter a number from 1 to 5 : "));
+
+   var randomNumber = Math.floor(Math.random() * 5) + 1;   // 1 thake 5 projontu random number nibe
+  
+   if (guessNumber == randomNumber) {
+     console.log("You have won");
+     numOfWon++  // won hole ak ak kore barbe
+   }else {
+      console.log("You have lost. Random number was " + randomNumber);
+      numOfLost++ // lost hole ak ak kore barbe
+   }
+}
+
+document.write("Total Number of won = " + numOfWon + "<br>");
+document.write("Total Number of Lost = " + numOfLost + "<br>");
+
+*/
+
+
+// class: 31 // Date Object and its methods
+// akhane date thake year methods access hoyace
+// abr var tarun dile tarun thake access hbe
+// akhene valiable anyname set kora jabe
+
+/*
+var tarun = new Date();
+// console.log(date);
+document.write(tarun);
+
+var year = tarun.getFullYear();
+console.log(tarun);
+*/
+
+/*
+// year dakhbe
+
+var date = new Date();
+// console.log(date);
+document.write(date);
+
+var year = date.getFullYear();
+document.write(year);
+*/
+
+/*
+var date = new Date();
+// console.log(date);
+document.write(date);
+*/
+
+
+/*
+// abr date thake month access hoce
+// month 0 thake 11 projontu 0 january thake soru 11 ke decembar month ke bujai
+
+
+var date = new Date();
+console.log(date);
+// document.write(date);
+
+var year = date.getFullYear();
+console.log(year);
+
+var month = date.getMonth();
+console.log(month);      // january hole month 0
+
+var currentDate = date.getDate();
+console.log(currentDate);
+
+var currentDay = date.getDay();
+console.log(currentDay);   // sunday 0 thake soru 6 projontu
+
+var currentHour = date.getHours();
+console.log(currentHour);
+
+var currentMinutes = date.getMinutes();
+console.log(currentMinutes);
+
+
+var currentSeconds = date.getSeconds();
+console.log(currentSeconds);
+
+
+var currentmillisecondes = date.getUTCMilliseconds();
+console.log(currentmillisecondes);
+*/
+
+
+
+         //var name = "Tarun mitra";
+        // var age = 24;
+
+        // var name;
+        // var age;
+
+        /* var name,age,country;
+
+        name = "sufia";
+        country = "Bangladesh";
+        age = 25;
+
+          document.write(name);
+          document.write(country);
+          document.write(age);
+          
+        */
+
+
+
+
+// CLASS: 32 // How to select HTML Element
+// Introduction to DOM (Document object model)
+// atodin ja shiklam ta abar babohar korbo
+// ei code er satha index file o royace
+
+/*
+// getElementById
+
+// document.getElementById("heading").innerHTML = "Hello";
+
+// amra ak e kaj avabayo korte pari
+
+var heading = document.getElementById("heading");
+heading.innerHTML = "Hello";
+
+document.getElementById("para").innerHTML = "Bye";
+
+document.getElementById("heading1").innerHTML = "Good Bye! Good Bye";
+
+*/
+
+/*
+//getElementsByTagName
+// akhane index[0][1] mane holo h2 2ta same tag prothom ta [0]index porer ta[1]
+
+document.getElementsByTagName("h2")[0].innerHTML = "Mitra tarun";
+document.getElementsByTagName("h2")[1].innerHTML = "Small name";
+
+*/
+
+/*
+//getElementsByClassName
+// tag er mto same index er mardhome korte hbe
+// akta class thklayo [0] index dite hbe prothom index 0 er pore joto barbe totu[1][2][2]
+// akhane same class e 2ta value tai prothon index[0] abong 2nd index [1]
+
+document.getElementsByClassName("hd1")[0].innerHTML = "How are you";
+document.getElementsByClassName("hd1")[1].innerHTML = "How are you";
+
+
+document.getElementsByClassName("para2")[0].innerHTML = "amio valobashi";
+document.getElementsByClassName("para2")[1].innerHTML = "amio valobashi";
+document.getElementsByClassName("para2")[2].innerHTML = "amio valobashi";
+document.getElementsByClassName("para2")[3].innerHTML = "amio valobashi";
+*/
+
+
+
+// class: 33 // query selector
+
+/*
+// getElementById()
+// getElementsByTagName()
+// getElementsByClassName()
+// querySelector()     // querySelector() diya opore 3ta selector er kaj kora jai
+// class er age . and id er # dite hbe
+
+document.querySelector("#pid").innerHTML = "Yes this is paragraph";        // id select
+document.querySelector(".pid").innerHTML = "Yes this is paragraph";       // class select
+document.querySelector("h4").innerHTML = "Yes this is paragraph";       // tag select
+*/
+
+/*
+document.querySelector("a").innerHTML = "new text";                  // a tag select
+document.querySelector("li a").innerHTML = "new text";              // li vitor a tag select
+document.querySelector("ul li a").innerHTML = "new text";          //list tag select
+// document.querySelector("li a").innerHTML = "new text";         //avabayo list tag select kora jai
+// document.querySelector("div a").innerHTML = "new text";       //div er vitor link select
+document.querySelector(".my-div a").innerHTML = "new text";       //class er vitor link select
+*/
+
+/*
+//getElementsByClassName/getElementsByTagName javabe index[0] er mardhome 
+// select korace akoi vabe querySelectorAll er mardome kora jai
+
+document.querySelectorAll("h2")[0].innerHTML = "this is text";
+document.querySelectorAll("h2")[1].innerHTML = "this is text";
+document.querySelectorAll("h2")[2].innerHTML = "this is text";
+document.querySelectorAll("h2")[3].innerHTML = "this is text";
+document.querySelectorAll("h2")[4].innerHTML = "this is text";
+*/
+
+
+
+
+// CLASS: 34 Event Handler to onclick event
+/*
+function myMessage1(){
+   alert("I am button 1");
+}
+
+function myMessage2(){
+   alert("I am button 2");
+}
+
+function myMessage3(){
+   alert("I am a paragraph");
+}
+
+function myMessage4() {
+   document.querySelector("#heading").innerHTML = "I am  a heading";
+}
+
+function myMessage5() {
+   var myVar = document.querySelector("#heading1");
+   myVar.innerHTML = "I am a second heading";
+}
+*/
+
+/*
+function myMessage6() {
+   var myVar = document.querySelector("#heading2");
+   myVar.innerHTML = "I am 3rd heading";
+}
+*/
+
+/*
+var myVar = document.querySelector("#myimg");
+function myimg1() {
+   
+   myVar.src = "img/1.jpg";
+}
+
+function myimg2() {
+   myVar.src = "img/2.jpg";
+}
+*/
+
+/*
+function myimg1() {
+   document.querySelector("#myimg").src = "img/2.jpg";
+}
+function myimg2() {
+   document.querySelector("#myimg").src = "img/3.jpg";
+}
+*/
+
+
+// CLASS:35   DOM
+// Document Object Model - document object can access and manipulate HTMl
+// Document object model er mardhome amra....
+// Find/get,change,add, or delete HTMl elements
+// Document object er 2ti important bissoy
+// Dom methods - getElementById()  methods er pashe () first bracket thkbe
+// Dom properties = innerHTML,      properties er pashe () first bracket thkbe nah
+
+// Find/get
+// Methods
+// Document.getElementById(id)- Find element by id
+// Document.getElementsByTagName(name)-Find elements by tag name
+// Document.getElementsByClassName(name)-Find elements by className
+
+//Changing HTML Elements
+//Property
+
+/*
+// element.innerHTML = new Html content
+// element.attribute = new value
+// element.style.property = new style
+
+var link = document.getElementsByTagName("a")[0];
+link.innerHTML = "Tarun mitra";
+link.style.textDecoration = "none";
+link.style.color = "white";
+link.style.fontSize = "20px";
+link.href = "https://www.facebook.com/";
+link.style.backgroundColor = "orange";
+link.style.padding = "20px";
+link.style.margin = "10px";
+link.style.fontWeight = "900";
+
+*/
+
+
+/*
+// creating html element
+
+var heading3 = document.createElement("h1");   // je tag create korbo oi tag er nam
+var text = document.createTextNode("Tarun mitra");  //abong tag er vitor ja dibo tai
+heading3.appendChild(text);   // heading3 vitor je text thkbe tai text appendChild er mardhome add korlam
+
+var myDiv = document.getElementById("my-div");   //div select korte hbe tai id my-div nilam karon div er vitor e h1 tag dukabo
+myDiv.appendChild(heading3)
+
+
+var paragraph = document.createElement("p");
+var text = document.createTextNode("Bangladesh is a small country");
+paragraph.appendChild(text);
+
+var myDiv = document.getElementById("my-div"); // kar vitor jabe my div er vitor e
+myDiv.appendChild(paragraph);
+
+
+
+// Element remove korbo
+// akhane jahoto  h2 mydiv er vitor ace tai my-div ke Find kore nite hbe
+// jahato opore allready find kora ace tai noton kore korlam nah comment out kore raklam bujar jonne
+
+
+var myDiv = document.getElementById("my-div");   //div select korte hbe tai id my-div nilam karon div er vitor e h1 tag dukabo
+myDiv.appendChild(heading3);
+var heading2 = document.getElementsByTagName("h1")[1];
+myDiv.removeChild(heading2);
+
+
+
+// noton tag nilam and viotor e text add korlam
+// myDiv opore find kora ace tai noton kore nilam nah
+
+
+var heading0 = document.createElement("h1");
+var text0 = document.createTextNode("My name is tarun mitra");
+heading0.appendChild(text0);
+myDiv.appendChild(heading0);
+
+// kinto protibar text nichar dike add hoi kinto abr opore add korbo
+
+var headTop = document.createElement("h1");
+var text1 = document.createTextNode("TOP HEADING");
+headTop.appendChild(text1);
+var head1 = document.getElementsByTagName("h1")[0];
+myDiv.insertBefore(headTop, head1);  //karpor element add hbe (headtop,before,noton element age)(head1,after,tarpor porar element) // Create an html element with insertBefore(before,after) 
+
+/*
+// kivabe class khujbo 
+// agolo sob console e try korte hbe mone rakhar jonne note kore rakhlam
+document.getElementById("my-div").classList;
+// class add 
+document.getElementById("my-div").classList.add("new-add");
+check add hoyace kina: document.getElementById("my-div").classList;
+//class remove
+document.getElementById("my-div").classList.remove("new-add");
+check remove hoyace kina: document.getElementById("my-div").classList;
+*/
+// replace child google search kore shikha nite heb
+
+// Method
+// element.setAttribute(attribute, value) - change the attribute value of an html element
+
+
+
+//CLASS: 36 // image slider
+
+var photos = ["img/1.jpg","img/2.jpg","img/3.jpg"];   // amra sob golo img ke akta array vitor niya nilam
+var imgTag = document.querySelector("img");               // img ke find korlam jar vitor img ta kaj korbe abr ei find kora img kr akta variable er mordha rakha dilam
+
+var count = 0;                      // array vitor img er index count korar jonne count variable nilam
+function next() {
+   count++;                         // next e click korle index  1 kore barbe 
+
+   if (count >= photos.length) {           // total length index[3] hole bha soman hole abr zero thake count hbe
+         count = 0;
+         imgTag.src = photos[count];
+   }else{
+      imgTag.src = photos[count];
+   }
+   
+}
+
+function prev() {
+   count--;                         // next e click korle index  1 kore kombe 
+
+   if (count < 0) {
+      count = photos.length - 1;
+      imgTag.src = photos[count];
+   } else {
+      imgTag.src = photos[count];
+   }
+
+}
+
